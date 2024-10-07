@@ -17,7 +17,16 @@ function calculateBMI() {
   else if (bmi >= 25 && bmi < 30) {BMIState = 'Overweight'}
   else {BMIState = 'Obese'}
 
-  
+  let normalBMIbottom = 19;
+  let normalBMItop = 24;
 
-  alert(`Challenge 1: Your BMI is ${Math.round(bmi)} \nChallenge 2: Your BMI state is ${BMIState}`)
+  if (age > 24) {normalBMIbottom += 1; normalBMItop += 1}
+  if (age > 34) {normalBMIbottom += 1; normalBMItop += 1}
+  if (age > 44) {normalBMIbottom += 1; normalBMItop += 1}
+  if (age > 54) {normalBMIbottom += 1; normalBMItop += 1}
+  if (age > 64) {normalBMIbottom += 1; normalBMItop += 1}
+
+  const health = (bmi >= normalBMIbottom && bmi <= normalBMItop) ? 'Healthy' : 'Not Healthy'
+
+  alert(`Challenge 1: Your BMI is ${Math.round(bmi)} \nChallenge 2: Your BMI state is ${BMIState} \nChallenge 3: You are ${health}`)
 }
