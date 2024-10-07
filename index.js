@@ -8,4 +8,9 @@ function calculateBMI() {
   console.table({ age, weight, height, male, female });
 
   // You are going to write the code here before the curly braces 👇🏻
+
+  const bmi = (weight/(height*0.01) ** 2)
+  alert(`Challenge 1: Your BMI is ${Math.round(bmi)}`)
+
+  
 }
